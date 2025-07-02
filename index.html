@@ -2,26 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>M Arun - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M Arun | Data Analyst Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Vanilla Tilt for 3D hover effect -->
   <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+
+  <!-- tsParticles for background animation -->
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
 <body>
-  
+
+  <!-- Particle background -->
   <div id="particles-js"></div>
- <header>
+
+  <!-- Header -->
+  <header>
     <h1 class="tilt">M Arun</h1>
     <p>Aspiring Data Analyst | Python | Excel | Power BI</p>
   </header>
- <main>
+
+  <!-- Main Content -->
+  <main>
+    <!-- About Section -->
     <section id="about">
       <h2>About Me</h2>
       <img src="profile.jpg" alt="M Arun" class="profile-pic tilt" />
       <p>I am M Arun, an aspiring Data Analyst with strong skills in Python, Excel, and Power BI. I love technology, nature vibes, and solving data-driven problems.</p>
     </section>
-   <section id="projects">
+
+    <!-- Projects Section -->
+    <section id="projects">
       <h2>Projects</h2>
       <div class="project-card tilt">
         <h3><a href="https://github.com/Arun1881/Cricketer-Dashboard" target="_blank">Cricketer Dashboard</a></h3>
@@ -32,7 +49,9 @@
         <p>Python + YOLOv8-based real-time system to count and visualize human presence using OpenCV.</p>
       </div>
     </section>
-   <section id="skills">
+
+    <!-- Skills Section -->
+    <section id="skills">
       <h2>Skills</h2>
       <ul>
         <li>Python</li>
@@ -43,22 +62,31 @@
         <li>SQL Basics</li>
       </ul>
     </section>
- <section id="certifications">
+
+    <!-- Certifications Section -->
+    <section id="certifications">
       <h2>Certifications</h2>
       <ul>
         <li>Post Graduate Diploma in Building Management System – SMEC<br/>Certificate ID: 90199 | Issued: 13-Feb-2020</li>
         <li>CCNA 200-301 – Certified by Network Rhinos</li>
       </ul>
     </section>
- <section id="resume">
+
+    <!-- Resume Download -->
+    <section id="resume">
       <h2>Resume</h2>
       <a href="Arun_Resume.pdf" download class="download-btn">Download Resume</a>
     </section>
   </main>
- <footer>
+
+  <!-- Footer -->
+  <footer>
     <p>© 2025 M Arun • Built with HTML, CSS, and Love</p>
   </footer>
+
+  <!-- Custom Scripts -->
   <script>
+    // Scroll animation
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -66,17 +94,22 @@
         }
       });
     }, { threshold: 0.2 });
- document.querySelectorAll('section').forEach(section => {
+
+    document.querySelectorAll('section').forEach(section => {
       section.style.opacity = 0;
       section.style.transform = "rotateX(10deg)";
       observer.observe(section);
     });
+
+    // Vanilla tilt for hover effect
     VanillaTilt.init(document.querySelectorAll(".tilt"), {
       max: 15,
       speed: 400,
       glare: true,
       "max-glare": 0.3,
     });
+
+    // tsParticles background
     tsParticles.load("particles-js", {
       background: {
         color: "#f2f2f2"
