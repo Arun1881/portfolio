@@ -9,7 +9,6 @@
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
 <body>
- <!-- Particle background -->
   <div id="particles-js"></div>
  <header>
     <h1 class="tilt">M Arun</h1>
@@ -58,9 +57,7 @@
  <footer>
     <p>© 2025 M Arun • Built with HTML, CSS, and Love</p>
   </footer>
- <!-- Scripts -->
   <script>
-    // Scroll animation
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -73,14 +70,12 @@
       section.style.transform = "rotateX(10deg)";
       observer.observe(section);
     });
- // Vanilla tilt for 3D effect
     VanillaTilt.init(document.querySelectorAll(".tilt"), {
       max: 15,
       speed: 400,
       glare: true,
       "max-glare": 0.3,
     });
- // Particle background
     tsParticles.load("particles-js", {
       background: {
         color: "#f2f2f2"
