@@ -1,11 +1,18 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
+/* Basic Reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
   background-color: #f2f2f2;
   color: #333;
   perspective: 1000px;
 }
+
+/* Header */
 header {
   background-color: #001f3f;
   color: white;
@@ -13,13 +20,17 @@ header {
   text-align: center;
   box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
+
 header h1 {
-  margin: 0;
+  margin-bottom: 0.5rem;
   font-size: 2.5rem;
 }
+
 main {
   padding: 2rem;
 }
+
+/* Sections */
 section {
   margin-bottom: 2rem;
   background: rgba(255, 255, 255, 0.15);
@@ -31,15 +42,21 @@ section {
   transform-style: preserve-3d;
   opacity: 0;
 }
+
 section.visible {
   opacity: 1;
   transform: rotateX(0deg);
 }
+
+/* Section Titles */
 h2 {
   color: #001f3f;
   border-bottom: 2px solid #001f3f;
   padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
+
+/* Project Cards */
 .project-card {
   margin-bottom: 1rem;
   padding: 1rem;
@@ -48,10 +65,15 @@ h2 {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   border-radius: 10px;
 }
+
+/* Lists */
 ul {
   list-style-type: square;
   padding-left: 1.5rem;
+  line-height: 1.6;
 }
+
+/* Download Button */
 .download-btn {
   display: inline-block;
   background-color: #001f3f;
@@ -61,16 +83,22 @@ ul {
   text-decoration: none;
   font-weight: bold;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
 }
+
 .download-btn:hover {
   background-color: #004080;
 }
+
+/* Footer */
 footer {
   background-color: #001f3f;
   color: white;
   text-align: center;
   padding: 1rem;
 }
+
+/* Profile Image */
 .profile-pic {
   width: 160px;
   height: 160px;
@@ -80,12 +108,17 @@ footer {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
 }
+
 .profile-pic:hover {
   transform: scale(1.05);
 }
+
+/* 3D Tilt */
 .tilt {
   will-change: transform;
 }
+
+/* Particles Background */
 #particles-js {
   position: fixed;
   top: 0;
