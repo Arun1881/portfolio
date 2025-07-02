@@ -8,18 +8,18 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- External CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Vanilla Tilt for 3D hover effect -->
+  <!-- Vanilla Tilt for 3D hover effects -->
   <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
 
-  <!-- tsParticles for background animation -->
+  <!-- tsParticles for animated background -->
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
 <body>
 
-  <!-- Particle background -->
+  <!-- Particle Background -->
   <div id="particles-js"></div>
 
   <!-- Header -->
@@ -34,7 +34,7 @@
     <section id="about">
       <h2>About Me</h2>
       <img src="profile.jpg" alt="M Arun" class="profile-pic tilt" />
-      <p>I am M Arun, an aspiring Data Analyst with strong skills in Python, Excel, and Power BI. I love technology, nature vibes, and solving data-driven problems.</p>
+      <p>I am M Arun, an aspiring Data Analyst with strong skills in Python, Excel, and Power BI. I love technology, nature, and solving data problems.</p>
     </section>
 
     <!-- Projects Section -->
@@ -42,85 +42,7 @@
       <h2>Projects</h2>
       <div class="project-card tilt">
         <h3><a href="https://github.com/Arun1881/Cricketer-Dashboard" target="_blank">Cricketer Dashboard</a></h3>
-        <p>Interactive Power BI dashboard analyzing cricketer performance with filters, visuals, and KPIs.</p>
+        <p>Power BI dashboard for analyzing cricketer performance with filters, visuals, and KPIs.</p>
       </div>
       <div class="project-card tilt">
         <h3><a href="https://github.com/Arun1881/Real-Time-Crowd-Density-System" target="_blank">Crowd Density Detector</a></h3>
-        <p>Python + YOLOv8-based real-time system to count and visualize human presence using OpenCV.</p>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Python</li>
-        <li>Power BI</li>
-        <li>Excel</li>
-        <li>Pandas</li>
-        <li>Matplotlib</li>
-        <li>SQL Basics</li>
-      </ul>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Post Graduate Diploma in Building Management System – SMEC<br/>Certificate ID: 90199 | Issued: 13-Feb-2020</li>
-        <li>CCNA 200-301 – Certified by Network Rhinos</li>
-      </ul>
-    </section>
-
-    <!-- Resume Download -->
-    <section id="resume">
-      <h2>Resume</h2>
-      <a href="Arun_Resume.pdf" download class="download-btn">Download Resume</a>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 M Arun • Built with HTML, CSS, and Love</p>
-  </footer>
-
-  <!-- Custom Scripts -->
-  <script>
-    // Scroll animation
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll('section').forEach(section => {
-      section.style.opacity = 0;
-      section.style.transform = "rotateX(10deg)";
-      observer.observe(section);
-    });
-
-    // Vanilla tilt for hover effect
-    VanillaTilt.init(document.querySelectorAll(".tilt"), {
-      max: 15,
-      speed: 400,
-      glare: true,
-      "max-glare": 0.3,
-    });
-
-    // tsParticles background
-    tsParticles.load("particles-js", {
-      background: {
-        color: "#f2f2f2"
-      },
-      particles: {
-        number: { value: 30 },
-        size: { value: 3 },
-        move: { enable: true, speed: 1 },
-        shape: { type: "circle" },
-      }
-    });
-  </script>
-</body>
-</html>
