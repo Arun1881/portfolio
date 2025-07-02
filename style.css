@@ -1,4 +1,4 @@
-/* Basic Reset */
+/* Reset and Global */
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +10,7 @@ body {
   background-color: #f2f2f2;
   color: #333;
   perspective: 1000px;
+  line-height: 1.6;
 }
 
 /* Header */
@@ -26,6 +27,7 @@ header h1 {
   font-size: 2.5rem;
 }
 
+/* Main Content */
 main {
   padding: 2rem;
 }
@@ -48,7 +50,7 @@ section.visible {
   transform: rotateX(0deg);
 }
 
-/* Section Titles */
+/* Headings */
 h2 {
   color: #001f3f;
   border-bottom: 2px solid #001f3f;
@@ -56,7 +58,7 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* Project Cards */
+/* Projects */
 .project-card {
   margin-bottom: 1rem;
   padding: 1rem;
@@ -66,14 +68,28 @@ h2 {
   border-radius: 10px;
 }
 
-/* Lists */
+/* List Styling */
 ul {
   list-style-type: square;
   padding-left: 1.5rem;
-  line-height: 1.6;
 }
 
-/* Download Button */
+/* Profile Image */
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+/* Resume Button */
 .download-btn {
   display: inline-block;
   background-color: #001f3f;
@@ -98,27 +114,12 @@ footer {
   padding: 1rem;
 }
 
-/* Profile Image */
-.profile-pic {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
-}
-
-.profile-pic:hover {
-  transform: scale(1.05);
-}
-
-/* 3D Tilt */
+/* 3D Effect */
 .tilt {
   will-change: transform;
 }
 
-/* Particles Background */
+/* Particle Background */
 #particles-js {
   position: fixed;
   top: 0;
