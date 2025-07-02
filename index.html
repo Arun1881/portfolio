@@ -25,7 +25,8 @@
   <main>
     <section id="about">
       <h2>About Me</h2>
-      <p>I am M Arun, an aspiring Data Analyst with a strong foundation in Python, Excel, and Power BI. I hold a Post Graduate Diploma in Building Management System and am CCNA certified. I have 2 years of experience in billing management systems and currently pursuing MCA.</p>
+      <img src="profile.jpg" alt="M Arun" class="profile-pic" />
+    <p>I am M Arun, an aspiring Data Analyst with a strong foundation in Python, Excel, and Power BI. I hold a Post Graduate Diploma in Building Management System and am CCNA certified. I have 2 years of experience in billing management systems and currently pursuing MCA.</p>
     </section>
 
     <section id="skills">
@@ -72,6 +73,20 @@
   </main>
 
   <footer>
+    <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
     <p>&copy; 2025 M Arun. All rights reserved.</p>
   </footer>
 </body>
