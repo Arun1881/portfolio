@@ -44,10 +44,9 @@ section {
   transform-style: preserve-3d;
   opacity: 0;
 }
-
-section.visible {
-  opacity: 1;
-  transform: rotateX(0deg);
+section {
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 /* Headings */
