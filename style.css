@@ -42,11 +42,8 @@ section {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: all 0.8s ease;
   transform-style: preserve-3d;
-  opacity: 0;
-}
-section {
-  opacity: 1 !important;
-  transform: none !important;
+  opacity: 1;
+  transform: none;
 }
 
 /* Headings */
@@ -126,4 +123,29 @@ footer {
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  .download-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
 }
