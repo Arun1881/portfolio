@@ -16,6 +16,14 @@
 
   <!-- tsParticles for animated background -->
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+  <style>
+    /* TEMP FIX to force visibility if JS fails */
+    section {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -46,17 +54,64 @@
       </div>
       <div class="project-card tilt">
         <h3><a href="https://github.com/Arun1881/Real-Time-Crowd-Density-System" target="_blank">Crowd Density Detector</a></h3>
-        // const observer = new IntersectionObserver((entries) => {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add('visible');
-//     }
-//   });
-// }, { threshold: 0.2 });
+        <p>Real-time human detection and density analysis using Python, OpenCV, and YOLOv8.</p>
+      </div>
+    </section>
 
-// document.querySelectorAll('section').forEach(section => {
-//   section.style.opacity = 0;
-//   section.style.transform = "rotateX(10deg)";
-//   observer.observe(section);
-// });
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Python</li>
+        <li>Power BI</li>
+        <li>Excel</li>
+        <li>Pandas</li>
+        <li>Matplotlib</li>
+        <li>SQL Basics</li>
+      </ul>
+    </section>
 
+    <!-- Certifications Section -->
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Post Graduate Diploma in Building Management System – SMEC<br>Certificate ID: 90199 | Issued: 13-Feb-2020</li>
+        <li>CCNA 200-301 – Certified by Network Rhinos</li>
+      </ul>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume">
+      <h2>Resume</h2>
+      <a href="Arun_Resume.pdf" download class="download-btn">Download Resume</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 M Arun • Built with HTML, CSS, and Love</p>
+  </footer>
+
+  <!-- JS for animations -->
+  <script>
+    // Vanilla Tilt
+    VanillaTilt.init(document.querySelectorAll(".tilt"), {
+      max: 15,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.3,
+    });
+
+    // Particles Background
+    tsParticles.load("particles-js", {
+      background: { color: "#f2f2f2" },
+      particles: {
+        number: { value: 30 },
+        size: { value: 3 },
+        move: { enable: true, speed: 1 },
+        shape: { type: "circle" },
+      }
+    });
+  </script>
+</body>
+</html>
